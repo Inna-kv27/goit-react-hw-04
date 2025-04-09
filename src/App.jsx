@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import { ThreeDots } from 'react-spinners'; // Import ThreeDots from react-spinners
 import SearchBar from './components/SearchBar/SearchBar.jsx';
 import ImageGallery from './components/ImageGallery/ImageGallery.jsx';
-import Loader from './components/Loader/Loader.jsx';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage.jsx';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn.jsx';
 import ImageModal from './components/ImageModal/ImageModal.jsx';
@@ -87,7 +88,16 @@ function App() {
         />
       )}
 
-      {isLoading && <Loader />}
+      {isLoading && (
+        <div className={styles.loader}>
+          <ThreeDots
+            color="#3f51b5"
+            height={80}
+            width={80}
+            ariaLabel="loading"
+          />
+        </div>
+      )}
 
       {error && <ErrorMessage message={error} />}
 
