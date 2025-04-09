@@ -1,0 +1,21 @@
+.modalImage {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.closeButton:hover {
+  background-color: #303f9f;
+}
