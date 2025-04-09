@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { ThreeDots } from 'react-spinners'; // Import ThreeDots from react-spinners
+import { ThreeDots } from 'react-spinners';
 import SearchBar from './components/SearchBar/SearchBar.jsx';
 import ImageGallery from './components/ImageGallery/ImageGallery.jsx';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage.jsx';
