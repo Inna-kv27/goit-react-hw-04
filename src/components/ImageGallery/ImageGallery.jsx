@@ -4,23 +4,16 @@ import styles from './ImageGallery.module.css';
 const ImageGallery = ({ images, onImageClick }) => {
   return (
     <ul className={styles.imageGallery}>
-      {images.map(
-        ({
-          id,
-          webformatURL,
-          largeImageURL,
-          alt_description,
-        }) => (
-          <li key={id} className={styles.galleryItem}>
-            <ImageCard
-              webformatURL={webformatURL}
-              largeImageURL={largeImageURL}
-              alt={alt_description}
-              onClick={() => onImageClick(largeImageURL)}
-            />
-          </li>
-        )
-      )}
+      {images.map((image) => (
+        <li key={image.id} className={styles.galleryItem}>
+          <ImageCard
+            webformatURL={image.urls.small}
+            largeImageURL={image.urls.regular}
+            alt={image.alt_description}
+            onClick={() => onImageClick(image.urls.full)}
+          />
+        </li>
+      ))}
     </ul>
   );
 };
